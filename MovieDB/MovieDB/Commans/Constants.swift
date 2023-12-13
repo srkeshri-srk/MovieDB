@@ -16,6 +16,7 @@ struct Constants {
         static let navTitle = "Movie DB"
         static let movieDetailsURL = "https://api.themoviedb.org/3/movie/now_playing"
         
+        
         struct Table {
             static let movieDetailsCell =  "MovieDetailsTableViewCell"
         }

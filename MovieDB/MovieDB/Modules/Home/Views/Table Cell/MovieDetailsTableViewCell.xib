@@ -37,19 +37,19 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrQ-TA-vM1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="45.333333333333336"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="39.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlA-0C-xX1">
-                                                        <rect key="frame" x="0.0" y="45.333333333333343" width="270" height="27.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="39.333333333333343" width="270" height="30.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0I-M0-5Vw">
-                                                        <rect key="frame" x="0.0" y="72.666666666666686" width="270" height="27.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="69.666666666666686" width="270" height="30.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>

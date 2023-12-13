@@ -61,7 +61,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
 
 extension ViewController: MovieDetailsTableViewCellProtocol {
-    func favouriteButtonTapped() {
-        print("Add To Fav.")
+    func favouriteButtonTapped(data: Results) {
+        viewModel.addTofavourite(for: "V1", data: data)
     }
 }

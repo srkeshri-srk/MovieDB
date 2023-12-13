@@ -13,14 +13,18 @@ protocol MovieDetailsProtocol {
     static func builder() -> HomeViewModel
     func fetchMovieData(completion: @escaping ()->Void)
     func getContentsInfo(index: Int) -> Results?
+    func addTofavourite(for key: String, data: Results)
+    func getDatafromFavourite(for key: String, completion: @escaping () -> Void)
 }
 
 class HomeViewModel: MovieDetailsProtocol {
     private let networkLayerServices: NetworkLayerServices
     private var homeData: [Results]? = [Results]()
+    private var favouriteData: [String: [Results]] = [:]
+    private var data: [Results]? = [Results]()
 
     var count: Int {
-        return homeData?.count ?? 0
+        return data?.count ?? 0
     }
     
     init(networkLayerServices: NetworkLayerServices) {
@@ -52,13 +56,31 @@ class HomeViewModel: MovieDetailsProtocol {
     private func configureData(model: HomeModel) {
         guard let data = model.results else { return }
         self.homeData?.append(contentsOf: data)
+        self.data = homeData
     }
     
     func getContentsInfo(index: Int) -> Results? {
-        guard let homeData = self.homeData?[index] else { return nil }
+        guard let homeData = self.data?[index] else { return nil }
         return homeData
     }
     
+    func addTofavourite(for key: String, data: Results) {
+        if favouriteData[key] == nil {
+            favouriteData[key] = [data]
+        } else {
+            favouriteData[key]?.append(data)
+        }
+    }
+    
+    func getDatafromFavourite(for key: String, completion: @escaping () -> Void) {
+        guard let value = favouriteData[key] else {
+            completion()
+            return
+        }
+        
+        data = value
+        completion()
+    }
 
 }
 

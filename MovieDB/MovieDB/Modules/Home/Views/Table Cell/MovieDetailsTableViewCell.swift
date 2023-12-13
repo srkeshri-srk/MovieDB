@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MovieDetailsTableViewCellProtocol: AnyObject {
-    func favouriteButtonTapped()
+    func favouriteButtonTapped(data: Results)
 }
 
 class MovieDetailsTableViewCell: UITableViewCell {
@@ -21,6 +21,7 @@ class MovieDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var favouriteButton: UIButton!
     
     weak var delegate: MovieDetailsTableViewCellProtocol?
+    var data: Results?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,6 +36,7 @@ class MovieDetailsTableViewCell: UITableViewCell {
         
     func configureUI(data: Results?) {
         guard let data = data else { return }
+        self.data = data
         
         titleLabel.text = data.originalTitle
         ratingLabel.text = String(format: "%.1f/10", data.voteAverage ?? 0.0)
@@ -42,7 +44,8 @@ class MovieDetailsTableViewCell: UITableViewCell {
     }
     
     @IBAction func favouriteButtonTapAction(_ sender: UIButton) {
-        delegate?.favouriteButtonTapped()
+        guard let data = data else { return }
+        delegate?.favouriteButtonTapped(data: data)
     }
     
 }
