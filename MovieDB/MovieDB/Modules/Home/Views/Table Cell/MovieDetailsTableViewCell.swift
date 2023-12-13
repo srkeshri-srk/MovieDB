@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MovieDetailsTableViewCellProtocol: AnyObject {
+    func favouriteButtonTapped()
+}
+
 class MovieDetailsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var outerView: UIView!
@@ -15,6 +19,8 @@ class MovieDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var playlistLabel: UILabel!
     @IBOutlet weak var favouriteButton: UIButton!
+    
+    weak var delegate: MovieDetailsTableViewCellProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,7 +42,7 @@ class MovieDetailsTableViewCell: UITableViewCell {
     }
     
     @IBAction func favouriteButtonTapAction(_ sender: UIButton) {
-        print("Clicked")
+        delegate?.favouriteButtonTapped()
     }
     
 }

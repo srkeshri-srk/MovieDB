@@ -50,10 +50,18 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MovieDetailsTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Home.Table.movieDetailsCell, for: indexPath) as! MovieDetailsTableViewCell
         cell.configureUI(data: viewModel.getContentsInfo(index: indexPath.row))
+        cell.delegate = self
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 310.0
+    }
+}
+
+
+extension ViewController: MovieDetailsTableViewCellProtocol {
+    func favouriteButtonTapped() {
+        print("Add To Fav.")
     }
 }
