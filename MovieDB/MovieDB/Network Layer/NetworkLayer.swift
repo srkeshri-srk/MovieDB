@@ -11,6 +11,10 @@
 
 import Foundation
 
+protocol NetworkLayerServiceable {
+    
+}
+
 final class NetworkLayerServices {
     let urlSession: URLSession
     private let configuration: URLSessionConfiguration

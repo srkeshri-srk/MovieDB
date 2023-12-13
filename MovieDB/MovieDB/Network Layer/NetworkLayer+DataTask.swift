@@ -26,7 +26,14 @@ extension NetworkLayerServices {
             
             //Status Validation
             guard let response = response as? HTTPURLResponse, (200..<300) ~= response.statusCode else {
-                completion(.failure(.httpFailure))
+                let jsonData = self.readLocalJSONFile(forName: "MovieDetailsJSON")
+                if let data = jsonData {
+                    if let result: T = JSONParser().decode(data) {
+                        completion(.success(result))
+                    } else {
+                        completion(.failure(.dataCantParse))
+                    }
+                }
                 return
             }
             
@@ -38,5 +45,19 @@ extension NetworkLayerServices {
             }
             
         }.resume()
+    }
+    
+    
+    func readLocalJSONFile(forName name: String) -> Data? {
+        do {
+            if let filePath = Bundle.main.path(forResource: name, ofType: "json") {
+                let fileUrl = URL(fileURLWithPath: filePath)
+                let data = try Data(contentsOf: fileUrl)
+                return data
+            }
+        } catch {
+            print("error: \(error)")
+        }
+        return nil
     }
 }

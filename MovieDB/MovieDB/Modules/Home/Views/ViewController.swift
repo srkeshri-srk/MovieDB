@@ -17,11 +17,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        fetchData()
         setupTableView()
     }
     
     private func setupUI() {
-        viewModel.fetchData {
+        
+    }
+    
+    private func fetchData() {
+        viewModel.fetchMovieData {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -44,6 +49,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MovieDetailsTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.Home.Table.movieDetailsCell, for: indexPath) as! MovieDetailsTableViewCell
+        cell.configureUI(data: viewModel.getContentsInfo(index: indexPath.row))
         return cell
     }
     

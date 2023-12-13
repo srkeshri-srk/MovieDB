@@ -26,16 +26,13 @@ class MovieDetailsTableViewCell: UITableViewCell {
         outerView.layer.cornerRadius = 10.0
         outerView.layer.masksToBounds = true
     }
-    
-    private func reset() {
-        artworkImageView.image = nil
-        titleLabel.text = ""
-        ratingLabel.text = ""
-        playlistLabel.text = ""
-    }
-    
-    func configureUI() {
-        reset()
+        
+    func configureUI(data: Results?) {
+        guard let data = data else { return }
+        
+        titleLabel.text = data.originalTitle
+        ratingLabel.text = String(format: "%.1f/10", data.voteAverage ?? 0.0)
+
     }
     
     @IBAction func favouriteButtonTapAction(_ sender: UIButton) {

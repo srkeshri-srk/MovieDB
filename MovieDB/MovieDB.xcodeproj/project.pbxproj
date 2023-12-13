@@ -20,6 +20,7 @@
 		13591B2227D71019006FB453 /* ReadMe.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 13591B2127D71019006FB453 /* ReadMe.pdf */; };
 		E1330BE62B298B1C00AF9ECE /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1330BE52B298B1B00AF9ECE /* HomeModel.swift */; };
 		E1330BE82B298B2600AF9ECE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1330BE72B298B2600AF9ECE /* HomeViewModel.swift */; };
+		E1330BEE2B2992EB00AF9ECE /* MovieDetailsJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = E1330BED2B2992EB00AF9ECE /* MovieDetailsJSON.json */; };
 		E19B219F2B29828B00C11D1C /* MovieDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B219D2B29828B00C11D1C /* MovieDetailsTableViewCell.swift */; };
 		E19B21A02B29828B00C11D1C /* MovieDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19B219E2B29828B00C11D1C /* MovieDetailsTableViewCell.xib */; };
 		E19B21A32B29830C00C11D1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B21A22B29830C00C11D1C /* Constants.swift */; };
@@ -66,6 +67,7 @@
 		13591B2127D71019006FB453 /* ReadMe.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ReadMe.pdf; sourceTree = "<group>"; };
 		E1330BE52B298B1B00AF9ECE /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		E1330BE72B298B2600AF9ECE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E1330BED2B2992EB00AF9ECE /* MovieDetailsJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MovieDetailsJSON.json; sourceTree = "<group>"; };
 		E19B219D2B29828B00C11D1C /* MovieDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		E19B219E2B29828B00C11D1C /* MovieDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		E19B21A22B29830C00C11D1C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				E19B21A22B29830C00C11D1C /* Constants.swift */,
+				E1330BED2B2992EB00AF9ECE /* MovieDetailsJSON.json */,
 			);
 			path = Commans;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13591B2227D71019006FB453 /* ReadMe.pdf in Resources */,
+				E1330BEE2B2992EB00AF9ECE /* MovieDetailsJSON.json in Resources */,
 				13591AFE27D70FF3006FB453 /* LaunchScreen.storyboard in Resources */,
 				13591AFB27D70FF3006FB453 /* Assets.xcassets in Resources */,
 				E19B21A02B29828B00C11D1C /* MovieDetailsTableViewCell.xib in Resources */,

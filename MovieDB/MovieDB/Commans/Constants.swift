@@ -10,6 +10,7 @@ import Foundation
 
 struct Constants {
     static let apiKey = "38a73d59546aa378980a88b645f487fc"
+    
     //MARK: - Home
     struct Home {
         static let navTitle = "Movie DB"
