@@ -152,12 +152,28 @@
 			path = MovieDBUITests;
 			sourceTree = "<group>";
 		};
+		E1330BE92B298C5D00AF9ECE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1330BE52B298B1B00AF9ECE /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E1330BEA2B298C6100AF9ECE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E1330BE72B298B2600AF9ECE /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E19B219B2B29825100C11D1C /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				E19B219C2B29825A00C11D1C /* Views */,
-				E1330BE52B298B1B00AF9ECE /* HomeModel.swift */,
-				E1330BE72B298B2600AF9ECE /* HomeViewModel.swift */,
+				E1330BE92B298C5D00AF9ECE /* Model */,
+				E1330BEA2B298C6100AF9ECE /* ViewModel */,
 			);
 			path = Home;
 			sourceTree = "<group>";

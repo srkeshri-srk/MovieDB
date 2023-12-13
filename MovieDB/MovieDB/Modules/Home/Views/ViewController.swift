@@ -21,7 +21,11 @@ class ViewController: UIViewController {
     }
     
     private func setupUI() {
-        
+        viewModel.fetchData {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     private func setupTableView() {
