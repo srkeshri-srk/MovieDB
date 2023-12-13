@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let viewModel: MovieDetailsProtocol = HomeViewModel.builder()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +35,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

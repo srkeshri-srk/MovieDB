@@ -18,6 +18,8 @@
 		13591B1327D70FF4006FB453 /* MovieDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13591B1227D70FF4006FB453 /* MovieDBUITests.swift */; };
 		13591B1527D70FF4006FB453 /* MovieDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13591B1427D70FF4006FB453 /* MovieDBUITestsLaunchTests.swift */; };
 		13591B2227D71019006FB453 /* ReadMe.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 13591B2127D71019006FB453 /* ReadMe.pdf */; };
+		E1330BE62B298B1C00AF9ECE /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1330BE52B298B1B00AF9ECE /* HomeModel.swift */; };
+		E1330BE82B298B2600AF9ECE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1330BE72B298B2600AF9ECE /* HomeViewModel.swift */; };
 		E19B219F2B29828B00C11D1C /* MovieDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B219D2B29828B00C11D1C /* MovieDetailsTableViewCell.swift */; };
 		E19B21A02B29828B00C11D1C /* MovieDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19B219E2B29828B00C11D1C /* MovieDetailsTableViewCell.xib */; };
 		E19B21A32B29830C00C11D1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B21A22B29830C00C11D1C /* Constants.swift */; };
@@ -62,6 +64,8 @@
 		13591B1227D70FF4006FB453 /* MovieDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBUITests.swift; sourceTree = "<group>"; };
 		13591B1427D70FF4006FB453 /* MovieDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		13591B2127D71019006FB453 /* ReadMe.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ReadMe.pdf; sourceTree = "<group>"; };
+		E1330BE52B298B1B00AF9ECE /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		E1330BE72B298B2600AF9ECE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E19B219D2B29828B00C11D1C /* MovieDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		E19B219E2B29828B00C11D1C /* MovieDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		E19B21A22B29830C00C11D1C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				E19B219C2B29825A00C11D1C /* Views */,
+				E1330BE52B298B1B00AF9ECE /* HomeModel.swift */,
+				E1330BE72B298B2600AF9ECE /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -288,7 +294,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					13591AEA27D70FF0006FB453 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -366,6 +372,8 @@
 				E19B21AB2B2983A200C11D1C /* NetworkLayer.swift in Sources */,
 				E19B219F2B29828B00C11D1C /* MovieDetailsTableViewCell.swift in Sources */,
 				13591AF127D70FF0006FB453 /* SceneDelegate.swift in Sources */,
+				E1330BE82B298B2600AF9ECE /* HomeViewModel.swift in Sources */,
+				E1330BE62B298B1C00AF9ECE /* HomeModel.swift in Sources */,
 				E19B21AD2B2983A200C11D1C /* APIRequest.swift in Sources */,
 				E19B21AE2B2983A200C11D1C /* NetworkError.swift in Sources */,
 				E19B21A32B29830C00C11D1C /* Constants.swift in Sources */,
@@ -461,6 +469,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -522,6 +531,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
