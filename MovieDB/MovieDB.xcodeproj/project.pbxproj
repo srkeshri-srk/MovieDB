@@ -21,6 +21,12 @@
 		E19B219F2B29828B00C11D1C /* MovieDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B219D2B29828B00C11D1C /* MovieDetailsTableViewCell.swift */; };
 		E19B21A02B29828B00C11D1C /* MovieDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E19B219E2B29828B00C11D1C /* MovieDetailsTableViewCell.xib */; };
 		E19B21A32B29830C00C11D1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B21A22B29830C00C11D1C /* Constants.swift */; };
+		E19B21AA2B2983A200C11D1C /* NetworkLayer+DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B21A42B2983A200C11D1C /* NetworkLayer+DataTask.swift */; };
+		E19B21AB2B2983A200C11D1C /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B21A52B2983A200C11D1C /* NetworkLayer.swift */; };
+		E19B21AC2B2983A200C11D1C /* URLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B21A62B2983A200C11D1C /* URLGenerator.swift */; };
+		E19B21AD2B2983A200C11D1C /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B21A72B2983A200C11D1C /* APIRequest.swift */; };
+		E19B21AE2B2983A200C11D1C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B21A82B2983A200C11D1C /* NetworkError.swift */; };
+		E19B21AF2B2983A200C11D1C /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B21A92B2983A200C11D1C /* JSONParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,12 @@
 		E19B219D2B29828B00C11D1C /* MovieDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		E19B219E2B29828B00C11D1C /* MovieDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		E19B21A22B29830C00C11D1C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E19B21A42B2983A200C11D1C /* NetworkLayer+DataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkLayer+DataTask.swift"; sourceTree = "<group>"; };
+		E19B21A52B2983A200C11D1C /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		E19B21A62B2983A200C11D1C /* URLGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLGenerator.swift; sourceTree = "<group>"; };
+		E19B21A72B2983A200C11D1C /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		E19B21A82B2983A200C11D1C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		E19B21A92B2983A200C11D1C /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,10 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				E1F5C0C22B29803000A779B6 /* App LifeCycle */,
+				E19B21B02B2983AA00C11D1C /* Network Layer */,
 				E1F5C0C42B29805300A779B6 /* Modules */,
+				E19B21B12B2983B900C11D1C /* Commans */,
 				E1F5C0C32B29804000A779B6 /* Resources */,
 				13591AFF27D70FF3006FB453 /* Info.plist */,
-				E19B21A22B29830C00C11D1C /* Constants.swift */,
 			);
 			path = MovieDB;
 			sourceTree = "<group>";
@@ -160,6 +173,27 @@
 				E19B219E2B29828B00C11D1C /* MovieDetailsTableViewCell.xib */,
 			);
 			path = "Table Cell";
+			sourceTree = "<group>";
+		};
+		E19B21B02B2983AA00C11D1C /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				E19B21A42B2983A200C11D1C /* NetworkLayer+DataTask.swift */,
+				E19B21A52B2983A200C11D1C /* NetworkLayer.swift */,
+				E19B21A62B2983A200C11D1C /* URLGenerator.swift */,
+				E19B21A72B2983A200C11D1C /* APIRequest.swift */,
+				E19B21A82B2983A200C11D1C /* NetworkError.swift */,
+				E19B21A92B2983A200C11D1C /* JSONParser.swift */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		E19B21B12B2983B900C11D1C /* Commans */ = {
+			isa = PBXGroup;
+			children = (
+				E19B21A22B29830C00C11D1C /* Constants.swift */,
+			);
+			path = Commans;
 			sourceTree = "<group>";
 		};
 		E1F5C0C22B29803000A779B6 /* App LifeCycle */ = {
@@ -324,10 +358,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				13591AF327D70FF0006FB453 /* ViewController.swift in Sources */,
+				E19B21AA2B2983A200C11D1C /* NetworkLayer+DataTask.swift in Sources */,
+				E19B21AF2B2983A200C11D1C /* JSONParser.swift in Sources */,
 				13591AEF27D70FF0006FB453 /* AppDelegate.swift in Sources */,
 				13591AF927D70FF0006FB453 /* MovieDB.xcdatamodeld in Sources */,
+				E19B21AC2B2983A200C11D1C /* URLGenerator.swift in Sources */,
+				E19B21AB2B2983A200C11D1C /* NetworkLayer.swift in Sources */,
 				E19B219F2B29828B00C11D1C /* MovieDetailsTableViewCell.swift in Sources */,
 				13591AF127D70FF0006FB453 /* SceneDelegate.swift in Sources */,
+				E19B21AD2B2983A200C11D1C /* APIRequest.swift in Sources */,
+				E19B21AE2B2983A200C11D1C /* NetworkError.swift in Sources */,
 				E19B21A32B29830C00C11D1C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
