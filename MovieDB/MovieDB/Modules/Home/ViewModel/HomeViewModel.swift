@@ -5,7 +5,9 @@
 //  Created by Shreyansh Raj  Keshri on 13/12/23.
 //
 
-import Foundation
+import UIKit
+import Kingfisher
+
 
 protocol MovieDetailsProtocol {
     var count: Int { get }
@@ -15,6 +17,7 @@ protocol MovieDetailsProtocol {
     func getContentsInfo(index: Int) -> Results?
     func addTofavourite(for key: String, data: Results)
     func getDatafromFavourite(for key: String, completion: @escaping () -> Void)
+    func fetchImage(index: Int) -> UIImage
 }
 
 class HomeViewModel: MovieDetailsProtocol {
@@ -81,6 +84,25 @@ class HomeViewModel: MovieDetailsProtocol {
         data = value
         completion()
     }
+    
+    func fetchImage(index: Int) -> UIImage {
+        guard let imagePath = URL(string: Constants.Home.imageURLPath + (data?[index].backdropPath ??  "/1X7vow16X7CnCoexXh4H4F2yDJv.jpg")) else {
+            return UIImage(named: "placeholder")!
+        }
+                
+//        KingfisherManager.shared.retrieveImage(with: imagePath) { result in
+//            switch result {
+//            case .success(let data):
+//                return data.image
+//            case .failure(let error):
+//                print(error)
+//                UIImage(named: "placeholder")
+//            }
+//        }
+
+        return UIImage()
+    }
+
 
 }
 

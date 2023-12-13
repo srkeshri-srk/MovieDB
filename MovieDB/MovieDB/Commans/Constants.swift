@@ -15,6 +15,7 @@ struct Constants {
     struct Home {
         static let navTitle = "Movie DB"
         static let movieDetailsURL = "https://api.themoviedb.org/3/movie/now_playing"
+        static let imageURLPath = "https://image.tmdb.org/t/p/w500"
         
         
         struct Table {
