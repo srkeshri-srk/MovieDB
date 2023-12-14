@@ -22,7 +22,8 @@ class ViewController: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = .black
+        view.backgroundColor = .white
+        title = Constants.Home.navTitle
     }
     
     private func fetchData() {
