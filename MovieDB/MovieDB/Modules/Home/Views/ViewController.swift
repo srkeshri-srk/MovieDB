@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
     
     private func setupUI() {
-        
+        view.backgroundColor = .black
     }
     
     private func fetchData() {
@@ -55,7 +55,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 310.0
+        return UIScreen.main.bounds.size.width / 2
     }
 }
 

@@ -16,6 +16,7 @@ class MovieDetailsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var outerView: UIView!
     @IBOutlet weak var artworkImageView: UIImageView!
+    @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var playlistLabel: UILabel!
@@ -33,6 +34,14 @@ class MovieDetailsTableViewCell: UITableViewCell {
     private func setupUI() {
         outerView.layer.cornerRadius = 10.0
         outerView.layer.masksToBounds = true
+        artworkImageView.layer.cornerRadius = 10.0
+        artworkImageView.layer.masksToBounds = true
+        detailsView.layer.cornerRadius = 10.0
+        detailsView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+        detailsView.layer.masksToBounds = true
+        
+        detailsView.layer.borderColor = UIColor.blue.withAlphaComponent(0.4).cgColor
+        detailsView.layer.borderWidth = 1.0
     }
         
     func configureUI(data: Results?) {
@@ -42,7 +51,7 @@ class MovieDetailsTableViewCell: UITableViewCell {
         titleLabel.text = data.originalTitle
         ratingLabel.text = String(format: "%.1f/10", data.voteAverage ?? 0.0)
         
-        ImageLayer.loadImage(from: Constants.Home.imageURLPath + (data.backdropPath ??  "/1X7vow16X7CnCoexXh4H4F2yDJv.jpg")) { image in
+        ImageLayer.loadImage(from: Constants.Home.imageURLPath + (data.posterPath ??  "/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg")) { image in
             self.artworkImageView.image = image
         }
     }
