@@ -21,11 +21,27 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-9e-Gfe">
+                                <rect key="frame" x="273" y="698" width="80" height="80"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="mCh-a4-8kY"/>
+                                    <constraint firstAttribute="width" secondItem="WSG-9e-Gfe" secondAttribute="height" multiplier="1:1" id="oHI-Ca-o8k"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="filterButtonTapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S5M-LX-ehp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pjr-Ob-LD0" secondAttribute="trailing" id="03g-DK-TNu"/>
+                            <constraint firstItem="WSG-9e-Gfe" firstAttribute="bottom" secondItem="pjr-Ob-LD0" secondAttribute="bottom" constant="-40" id="3es-n9-54H"/>
+                            <constraint firstItem="WSG-9e-Gfe" firstAttribute="trailing" secondItem="pjr-Ob-LD0" secondAttribute="trailing" constant="-40" id="O7H-0t-U18"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pjr-Ob-LD0" secondAttribute="bottom" id="T8O-JC-Uwb"/>
                             <constraint firstItem="pjr-Ob-LD0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dA0-VO-bvQ"/>
                             <constraint firstItem="pjr-Ob-LD0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hMi-qu-c4P"/>
@@ -33,6 +49,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="pxJ-QD-ncH"/>
                     <connections>
+                        <outlet property="filterButton" destination="WSG-9e-Gfe" id="Qk9-fq-0e0"/>
                         <outlet property="tableView" destination="pjr-Ob-LD0" id="j40-6M-E4g"/>
                     </connections>
                 </viewController>
@@ -60,8 +77,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

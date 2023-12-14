@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var filterButton: UIButton!
     
     let viewModel: MovieDetailsProtocol = HomeViewModel.builder()
     
@@ -24,6 +25,9 @@ class ViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = .white
         title = Constants.Home.navTitle
+        
+        filterButton.layer.cornerRadius = filterButton.bounds.size.height / 2
+        filterButton.layer.masksToBounds = true
     }
     
     private func fetchData() {
@@ -39,7 +43,12 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: Constants.Home.Table.movieDetailsCell, bundle: nil), forCellReuseIdentifier: Constants.Home.Table.movieDetailsCell)
     }
-
+    
+    
+    @IBAction func filterButtonTapAction(_ sender: UIButton) {
+        
+    }
+    
 }
 
 
