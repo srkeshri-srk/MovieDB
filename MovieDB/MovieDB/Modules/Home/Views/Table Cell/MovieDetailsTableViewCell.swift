@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kingfisher
+
 
 protocol MovieDetailsTableViewCellProtocol: AnyObject {
     func favouriteButtonTapped(data: Results)
@@ -41,7 +41,10 @@ class MovieDetailsTableViewCell: UITableViewCell {
         
         titleLabel.text = data.originalTitle
         ratingLabel.text = String(format: "%.1f/10", data.voteAverage ?? 0.0)
-        artworkImageView.kf.setImage(with: URL(string: Constants.Home.imageURLPath + (data.backdropPath ??  "/1X7vow16X7CnCoexXh4H4F2yDJv.jpg")))
+        
+        ImageLayer.loadImage(from: Constants.Home.imageURLPath + (data.backdropPath ??  "/1X7vow16X7CnCoexXh4H4F2yDJv.jpg")) { image in
+            self.artworkImageView.image = image
+        }
     }
     
     @IBAction func favouriteButtonTapAction(_ sender: UIButton) {
