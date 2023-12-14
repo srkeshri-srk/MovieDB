@@ -50,10 +50,25 @@ class HomeViewModel: MovieDetailsProtocol {
                 self.configureData(model: success)
                 completion()
             case .failure(let failure):
-                print(failure)
-                completion()
+                print("Error - ", failure)
+                self.fetchDatafromJSON(completion: completion)
             }
         }
+    }
+    
+    private func fetchDatafromJSON(completion: @escaping () -> Void) {
+        guard let jsonData = JSONReader.readLocalJSONFile(for: .MovieDetails) else {
+            completion()
+            return
+        }
+        
+        guard let result: HomeModel = JSONParser().decode(jsonData) else {
+            completion()
+            return
+        }
+                
+        self.configureData(model: result)
+        completion()
     }
     
     private func configureData(model: HomeModel) {
@@ -86,9 +101,9 @@ class HomeViewModel: MovieDetailsProtocol {
     }
     
     func fetchImage(index: Int) -> UIImage {
-        guard let imagePath = URL(string: Constants.Home.imageURLPath + (data?[index].backdropPath ??  "/1X7vow16X7CnCoexXh4H4F2yDJv.jpg")) else {
-            return UIImage(named: "placeholder")!
-        }
+//        guard let imagePath = URL(string: Constants.Home.imageURLPath + (data?[index].backdropPath ??  "/1X7vow16X7CnCoexXh4H4F2yDJv.jpg")) else {
+//            return UIImage(named: "placeholder")!
+//        }
                 
 //        KingfisherManager.shared.retrieveImage(with: imagePath) { result in
 //            switch result {
